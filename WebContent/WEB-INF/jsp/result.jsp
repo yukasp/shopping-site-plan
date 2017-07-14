@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+  <title>ShoppingSite購入結果</title>
 </head>
 <body>
-
+  <h1>購入結果</h1>
+  <p>購入しました。</p>
+  <a href="/shopping-site-plan/Main">商品一覧へ</a>
 </body>
 </html>

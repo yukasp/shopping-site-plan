@@ -44,7 +44,22 @@ indexへのリンク
 商品の購入が済んだページ
 /Main(商品一覧へのリンクがある)
 
-9.
+9.BuyItem(servletパッケージ)
+mainのformでPostされた情報をsessionオブジェクトに格納する
+買い物かごに購入したものを反映させるロジック
+shopping-cartページへフォワード
+
+10.shopping-cart(WEB-INF/jsp)
+sessionオブジェクトに格納された値を取り出す
+ResultLogicへ購入ボタンでPostする
+
+11.ResultLogic(servletパッケージ)
+Postを受け取りresult.jspへ
+
+12.result.jsp(/WEB-INF/jsp)
+購入したというメッセージを出力するだけ
+今後何を購入したかも表示できるようにする
+
 参考書:スッキリわかるサーブレット&JSP入門
 参考ページ:Java MVCフレームワークでショッピング風サイトを作る
 
