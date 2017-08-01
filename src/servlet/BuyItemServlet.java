@@ -21,15 +21,22 @@ public class BuyItemServlet extends HttpServlet {
 
 	        //リクエストパラメータを取得
 	        request.setCharacterEncoding("UTF-8");
-	        String ringo = request.getParameter("ringo");
-	        //String banana = request.getParameter("banana");
-
+	        String productName = request.getParameter("productName");
+	        //セッション変数を取得
 	        HttpSession session = request.getSession();
-	        Product product = new Product();
-	        product.setName(ringo);
-		    session.setAttribute("Product", product);
+	        Product product = new Product();//プロダクトオブジェクトインスタンス化
+	        product.setName(productName);//インスタンスにproductNameを入れる。押されたsubmitのvalueがsetされる
+	        session.setAttribute("Product", product);//セッションスコープに値をセット
 
-	       //session.setAttribute("Product", banana);
+	        /*if(null != product) {//このコードでは商品が増えた時それぶんだけif文を書かなきゃ行けないから大変。
+	        	product.setName(ringo);
+	        }
+	        else if(null != banana) {
+	        	product.setName(banana);
+	        }*/
+
+
+
 
 
 	        // 購入確認画面に移動
