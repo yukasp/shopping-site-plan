@@ -13,25 +13,27 @@ User loginUser = (User)session.getAttribute("loginUser");
 <body>
 <h2>買い物ページ</h2>
 <p>
-<%= loginUser.getName() %>さん、ログイン中
+ようこそ、<%= loginUser.getName() %>さん
 <a href="/shopping-site-plan/Logout">ログアウト</a>
 </p>
 <form method="post" action="BuyItem">
 <table border="1" style="width:400">
   <tr>
-    <th>写真</th><th>商品</th><th>値段</th>
+    <th>商品ID</th><th>写真</th><th>商品名</th><th>値段</th>
   </tr>
   <tr>
+  	<td>1</td>
     <td><img src="images/ringo.jpg" width="263" height="198"></td>
-    <td>ふじりんご</td>
+    <td>りんご</td>
     <td>178円</td>
-    <th><button type="submit" name="ringo" value="ふじりんご">購入</button></th>
+    <th><button type="submit" name="productName" value="りんご">購入</button></th>
   </tr>
   <tr>
+  	<td>2</td>
     <td><img src="images/banana.jpg" width="198" height="133"></td>
-    <td>王様バナナ</td>
+    <td>バナナ</td>
     <td>130円</td>
-    <th><button type="submit" name="banana" value="王様バナナ">購入</button></th>
+    <th><button type="submit" name="productName" value="バナナ">購入</button></th>
   </tr>
 </table>
 </form>

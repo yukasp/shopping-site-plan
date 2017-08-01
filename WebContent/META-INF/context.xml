@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<Context docBase="shoppingsite" path="/shoppingsite" reloadable="true">
+<Resouce name="jdbc/shoppingsite" auth="Container"
+		 type="javax.sql.DataSource" username="root" password="marujack000"
+		 driverClassName="org.gjt.mm.mysql.Driver"
+		 url="jdbc:mysql://localhost:3306/shoppingsite"
+		 validationQuery="select count(*) from products" />
+</Context>

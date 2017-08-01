@@ -3,6 +3,7 @@
 <%@ page import="model.User" %>
 <%@ page import="model.Product" %>
 <%
+
 User loginUser = (User)session.getAttribute("loginUser");
 Product product = (Product)session.getAttribute("Product");
 %>
