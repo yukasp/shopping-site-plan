@@ -2,27 +2,27 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>ShoppingSite</title>
-</head>
-<body>
-<div align="center">
-<h1>ShoppingSiteへようこそ</h1><br/>
+	<head>
+		<meta charset="UTF-8">
+		<title>ログイン画面</title>
+		<link rel="stylesheet" type="text/css" href="shop.css"/>
+	</head>
+	<body>
 
-<form action="/shopping-site-plan/Login" method="POST">
-<p>ユーザ名とパスワードを入力してください。</p><br />
-ユーザ名:<input type="text" name="name"><br />
-パスワード:<input type="password" name="pass"><br />
-<input type="submit" value="ログイン">
-</form>
+		<h1>ShoppingSiteへようこそ</h1>
+		<form action="/shopping-site-plan/Login" method="POST">
+			<h3>ユーザIDとパスワードを入力してください。</h3>
+			<p>ユーザID:<input type="text" name="id"></p>
+			<p>パスワード:<input type="password" name="pass"></p>
+			<p><font color="red">${ error }</font></p>
+			<input type="submit" value="ログイン">
+		</form>
 
-<footer>
-        <p class="copyright"><small>&copy; Copyright 2017 Supicule</small></p>
-</footer>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/footer.css">
 
-</div>
-</body>
+		<!-- <footer>
+        	<p><small>&copy; Copyright 2017 Spicule</small></p>
+		</footer> -->
+
+	</body>
 </html>
 
