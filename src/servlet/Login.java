@@ -39,7 +39,7 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-		request.setCharacterEncoding("UTF-8");
+				request.setCharacterEncoding("UTF-8");
 
 
 				//リクエストパラメータの取得
@@ -59,7 +59,7 @@ public class Login extends HttpServlet {
 
 					//mainサーブレットにフォワード
 					getServletContext()
-					.getRequestDispatcher("/index.jsp")
+					.getRequestDispatcher("/Main")
 					.forward(request, response);
 
 				}
@@ -76,7 +76,15 @@ public class Login extends HttpServlet {
 					request.getRequestDispatcher("/index.jsp").forward(request, response);
 
 				}
+				catch(NullPointerException e) {
+					//DBサーバが起動していない
+					System.err.println( "DBサーバを起動してください。" );
+					//ログイン失敗ページに飛ばす
+					getServletContext()
+					.getRequestDispatcher("/WEB-INF/jsp/loginErr.jsp")
+					.forward(request, response);
 
+				}
 	}
 }
 
